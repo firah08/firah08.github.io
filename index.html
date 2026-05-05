@@ -464,18 +464,6 @@ a, button, .hero-card, .stat-card, .tech-card, .project-card-large, .server-card
   border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;
   font-size: 12px; color: var(--muted); z-index: 100;
 }
-/* Center section content */
-.center-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Constrain width so it doesn't stretch too wide */
-.center-wrap {
-  width: 100%;
-  max-width: 900px;
-}
 
 </style>
 </head>
@@ -551,60 +539,31 @@ a, button, .hero-card, .stat-card, .tech-card, .project-card-large, .server-card
   </section>
 
   <!-- STATS SECTION -->
-  <section class="section center-section">
-  <div class="center-wrap">
-    
-    <div class="section-header">
-      <div class="section-icon"><i class="fas fa-chart-bar"></i></div>
-      <h2 class="section-title">Stats</h2>
+  <section class="section">
+    <div class="stats-grid stagger-children">
+       <div class="stat-card">
+         <div class="stat-value" id="total-views">--</div>
+         <div class="stat-label">Profile Views</div>
+       </div>
+       <div class="stat-card">
+         <div class="stat-value" id="repo-count">--</div>
+         <div class="stat-label">Repositories</div>
+       </div>
+       <div class="stat-card">
+         <div class="stat-value" style="font-size: 20px; font-weight: 500;">Active</div>
+         <div class="stat-label">Contributions (Year)</div>
+       </div>
     </div>
-
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-value" id="total-views">--</div>
-        <div class="stat-label">Profile Views</div>
-      </div>
-
-      <div class="stat-card">
-        <div class="stat-value" id="repo-count">--</div>
-        <div class="stat-label">Repositories</div>
-      </div>
-
-      <div class="stat-card">
-        <div class="stat-value">Active</div>
-        <div class="stat-label">Status</div>
-      </div>
-    </div>
-
-  </div>
-</section>
+  </section>
 
 
   <!-- TECH STACK SECTION -->
-   <section class="section center-section">
-  <div class="center-wrap">
-
-    <div class="section-header">
-      <div class="section-icon"><i class="fas fa-code"></i></div>
-      <h2 class="section-title">Tech Stack</h2>
-    </div>
-
-    <div class="tech-grid">
-      <div class="tech-card">HTML</div>
-      <div class="tech-card">CSS</div>
-      <div class="tech-card">JavaScript</div>
-      <div class="tech-card">Python</div>
-      <div class="tech-card">Git</div>
-    </div>
-
-  </div>
-</section>
   <section class="section">
     <div class="section-header">
       <div class="section-icon"><i class="fas fa-code"></i></div>
       <h2 class="section-title">Tech Stack</h2>
     </div>
-    <div class="tech-grid">
+    <div class="tech-grid stagger-children">
       <div class="tech-card"><i class="fab fa-html5 tech-icon" style="color: #e34c26;"></i><span class="tech-name">HTML5</span></div>
       <div class="tech-card"><i class="fab fa-js tech-icon" style="color: #f1e05a;"></i><span class="tech-name">JavaScript</span></div>
       <div class="tech-card"><i class="fab fa-python tech-icon" style="color: #3572A5;"></i><span class="tech-name">Python</span></div>
